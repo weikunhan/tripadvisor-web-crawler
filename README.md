@@ -14,7 +14,7 @@ Follow these steps to use the web crawler:
 - Install Python virtual environments:
 
 ```
-$ python3 -m pip3 install --user virtualenv
+$ pip3 install --user virtualenv
 ```
 
 - Clone all remote branches in Git:
