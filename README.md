@@ -14,7 +14,7 @@ Follow these steps to use the web crawler:
 - Install Python virtual environments:
 
 ```
-$ python3 -m pip3 install --user virtualenv
+$ pip3 install --user virtualenv
 ```
 
 - Clone all remote branches in Git:
@@ -82,5 +82,3 @@ Python >= 3.6 is required.
 ## License
 
 [MIT License](./LICENSE)
-
-
