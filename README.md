@@ -15,14 +15,18 @@ Follow these steps to use the web crawler:
 - Download Chromedrive from [here](https://chromedriver.chromium.org/).
 - Install Python virtual environments:
 
-        `python3 -m pip3 install --user virtualenv`
+```
+$ python3 -m pip3 install --user virtualenv
+```
 
 - Install Python packages from requirements file, either using pip, conda or virtualenv:
 
-        `cd tripadvisor-web-crawler`
-        `virtualenv ./venv`
-        `source ./venv/bin/activate`
-        `pip3 install -r requirements.txt`
+```
+$ cd tripadvisor-web-crawler
+$ virtualenv ./venv
+$ source ./venv/bin/activate
+$ pip3 install -r requirements.txt
+```
 
 ## Configuration
 
