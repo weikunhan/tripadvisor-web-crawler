@@ -28,7 +28,6 @@ $ git branch -a
 - Install Python packages from requirements file, either using pip, conda or virtualenv:
 
 ```
-
 $ virtualenv ./env
 $ source ./env/bin/activate
 $ pip3 install -r requirements.txt
@@ -60,6 +59,7 @@ The following show each part run examples and instructions.
 Generate file to recored the top-30 things_to_do URLs bellevue city 
 
 ```
+$ source ./env/bin/activate 
 $ python main.py -q bellevue -s things_to_do
 ```
 
@@ -82,5 +82,3 @@ Python >= 3.6 is required.
 ## License
 
 [MIT License](./LICENSE)
-
-
