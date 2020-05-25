@@ -23,8 +23,8 @@ $ python3 -m pip3 install --user virtualenv
 
 ```
 $ cd tripadvisor-web-crawler
-$ virtualenv ./venv
-$ source ./venv/bin/activate
+$ virtualenv ./env
+$ source ./env/bin/activate
 $ pip3 install -r requirements.txt
 ```
 
