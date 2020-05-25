@@ -2,11 +2,9 @@
 
 The web crawler was written in Python for [tripadvisor](https://www.tripadvisor.com/). This non-profit project is used to practice ETL(Extract, transform, load) for people who want to learn basic data engineer skills. 
 
-Scraper of Tripadvisor reviews, parametric by date and language. The script allows to scrape:
+The web crawler of Tripadvisor, the overall project include following parts:
 
-1. 
-2. 
-3. 
+1. Get URLs for input place name(e.g. bellevue) and related sections (e.g. things_to_do)
 
 ## Installation
 
@@ -19,10 +17,18 @@ Follow these steps to use the web crawler:
 $ python3 -m pip3 install --user virtualenv
 ```
 
+- Clone all remote branches in Git:
+
+```
+$ git clone https://github.com/weikunhan/tripadvisor-web-crawler.git
+$ cd tripadvisor-web-crawler
+$ git branch -a
+```
+
 - Install Python packages from requirements file, either using pip, conda or virtualenv:
 
 ```
-$ cd tripadvisor-web-crawler
+
 $ virtualenv ./env
 $ source ./env/bin/activate
 $ pip3 install -r requirements.txt
@@ -33,29 +39,41 @@ $ pip3 install -r requirements.txt
 The [config.json](./config.json) file allows to set:
 
 1. the Chromedrive setup
-2. the header for outpu csv
-3. the directory to store output csv, as well as their filenames
-4. the timeout and retry for web crawler
-5. the API info
+2. the timeout and retry for web crawler
+3. the API info
+4. the header for outpu csv
+5. the directory to store output csv, as well as their filenames
 6. the directory to store temp files
+7. the section information
 
 ## Usage
 
-The scraper has 5 parameters:
-- `--i`: input file, containing a list of Tripadvisor urls that point to first page of reviews.
-- `--lang`: language code to filter reviews.
-**Note**: only "select all languages" click is implemented.
-- `--N`: number of reviews to scrape.
-- `--q`: string query to scrape url places.
-- `--place`: boolean value to scrape place metadata instead of reviews.
+The web crawler has x parameters:
 
-Some examples:
+- `-q`, `--place_name`: crawling tartget place informaiton based on a string query.
+- `-s`, `--section_name`: crawling urls of section based on the search result for one place.
 
-- `python scraper.py --q amsterdam`: generates the _urls.txt_ file with the top-30 POIs of amsterdam
-- `python scraper.py --place 1`: generates a csv file containing metadata of places present in _urls.txt_
-- `python scraper.py`: generates a csv file containing reviews of places present in _urls.txt_
+The following show each part run examples and instructions.
 
+### Part 1
 
+Generate file to recored the top-30 things_to_do URLs bellevue city 
+
+```
+$ python main.py -q bellevue -s things_to_do
+```
+
+If you want to practice this part, you need to do:
+
+```
+$ git checkout practice-part-1
+```
+
+If you want to show answer for all parts, you need to do:
+
+```
+$ git checkout master
+```
 
 ## Note
 

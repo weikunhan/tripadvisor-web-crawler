@@ -1,0 +1,13 @@
+{
+    "version": 1.0,
+    "debug": true,
+    "website": "https://www.tripadvisor.com",
+    "chromedriver_path": "/mnt/c/Program Files (x86)/Google/Chrome/chromedriver.exe",
+    "search_api": "/Search?geo=1&searchNearby=&redirect=&uiOrigin=MASTHEAD&q={}&supportedSearchTypes=find_near_stand_alone_query&enableNearPage=true",
+    "timeout": 10,
+    "retry": 10,
+    "section": {
+        "things_to_do": "ATTRACTIONS",
+        "restaurants": "EATERY"
+    }
+}
