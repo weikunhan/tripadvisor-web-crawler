@@ -33,23 +33,6 @@ class Tripadvisor:
 
 
     def get_urls(self, query, intput_section):
-        url_list = []
-        selected_section = CONFIG["section"][intput_section]
-
-        self.driver.get(CONFIG["website"] + CONFIG["search_api"].format(query))
-        wait = WebDriverWait(self.driver, CONFIG["timeout"])
-        xpath_filter = '//a[@class=\'search-filter ui_tab  \'  and @data-filter-id=\'{}\']'.format(selected_section)
-        wait.until(EC.element_to_be_clickable((By.XPATH, xpath_filter))).click()
-        wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'div.search-results-list')))
-        response = BeautifulSoup(self.driver.page_source, 'html.parser')
-        results_list = response.find_all('div', class_='result-title')
-        
-        for result in results_list:
-            features = result['onclick'].split(',')
-            url = CONFIG["website"] + features[3].lstrip()[1:-1]
-            url_list.append(url)
-
-        return url_list
 
     def __get_driver(self, debug=True):
         path = CONFIG["chromedriver_path"]
