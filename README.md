@@ -28,7 +28,6 @@ $ git branch -a
 - Install Python packages from requirements file, either using pip, conda or virtualenv:
 
 ```
-
 $ virtualenv ./env
 $ source ./env/bin/activate
 $ pip3 install -r requirements.txt
