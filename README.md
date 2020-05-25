@@ -59,6 +59,7 @@ The following show each part run examples and instructions.
 Generate file to recored the top-30 things_to_do URLs bellevue city 
 
 ```
+$ source ./env/bin/activate 
 $ python main.py -q bellevue -s things_to_do
 ```
 
