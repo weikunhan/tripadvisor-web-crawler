@@ -36,5 +36,6 @@ The _config.json_ file allows to set the directory to store output csv, as well 
 
 ## License
 
+[MIT License](./LICENSE)
 
 
